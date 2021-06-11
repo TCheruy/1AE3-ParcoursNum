@@ -9,11 +9,12 @@ class Connexion {
     private function connexion(){
         try
         {
+            $host = '192.168.1.53:3310';
             $db = 'projet';
             $login = 'app';
             $pass = 'test';
             $bdd = new PDO(
-                'mysql:host=192.168.1.53:3310;dbname='.$db.';charset=utf8mb4',
+                'mysql:host='. $host .';dbname='.$db.';charset=utf8mb4',
                 $login,
                 $pass
             );
