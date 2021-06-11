@@ -29,6 +29,9 @@ class Connexion {
         }
     }
 
+    /*
+     Query sql and fetch all result
+    */
     public function q($sql,Array $cond = null){
         $stmt = $this->connec->prepare($sql);
 
@@ -45,6 +48,10 @@ class Connexion {
         $stmt=NULL;
     }
 
+    /*
+    Query sql and fetch only first result
+    */
+
     public function qone($sql,Array $cond = null){
         $stmt = $this->connec->prepare($sql);
 
@@ -60,6 +67,10 @@ class Connexion {
         $stmt->closeCursor();
         $stmt=NULL;
     }
+
+    /*
+    Execute sql request, used in import.php
+    */
 
     public function execute($sql,Array $cond = null){
         $stmt = $this->connec->prepare($sql);
