@@ -1,6 +1,6 @@
 <?php
 include 'include/pdo.php';
-$db = new Connexion('projet', 'app', 'test');
+$db = new Connexion();
 $ids = $db->q("SELECT DISTINCT id_commune FROM QUANTITE_PRODUITE");
 ?>
 <!doctype html>
