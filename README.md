@@ -9,3 +9,4 @@ Create database (SQL) to store data from the landfills near Grenoble (France). C
 docker build .
 docker run -p <PORT>:80
 ```
+
